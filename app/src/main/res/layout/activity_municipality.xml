@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_default_background"
+    tools:context=".Municipality">
+
+    <!-- Municipality name, background colour set programmatically -->
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="18dp"
+        android:textColor="@color/color_text_light"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Beijing" />
+
+    <!-- Municipality photograph, image resource set programmatically -->
+    <ImageView
+        android:id="@+id/municipalityImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/main_image_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        app:layout_constraintWidth_percent="0.85"
+        tools:src="@drawable/beijing" />
+
+    <!-- Scrollable information section, text colour set programmatically -->
+    <ScrollView
+        android:id="@+id/infoScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/visitSiteButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/municipalityImageView">
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="8dp"
+            android:textSize="16sp"
+            tools:text="Beijing is the capital of the People's Republic of China..." />
+
+    </ScrollView>
+
+    <!-- Button background colour set programmatically -->
+    <Button
+        android:id="@+id/visitSiteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/visit_site"
+        android:textAllCaps="false"
+        android:textColor="@color/color_text_light"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        tools:background="@color/municipality_beijing" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
