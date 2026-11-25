@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_default_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:text="@string/main_title"
+        android:textColor="@color/color_text_dark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:text="@string/main_subtitle"
+        android:textColor="@color/color_text_dark"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <ImageView
+        android:id="@+id/mainImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/main_image_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chinese_municipalities"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+        app:layout_constraintWidth_percent="0.82" />
+
+    <TextView
+        android:id="@+id/promptTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="24dp"
+        android:text="@string/main_prompt"
+        android:textColor="@color/color_text_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainImageView" />
+
+    <EditText
+        android:id="@+id/municipalityEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="none"
+        android:hint="@string/main_hint"
+        android:imeOptions="actionGo"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords|textNoSuggestions"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/color_text_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/promptTextView"
+        app:layout_constraintWidth_percent="0.82" />
+
+    <!-- Validation message, shown only when the input is invalid -->
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:textColor="#C62828"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/municipalityEditText"
+        app:layout_constraintWidth_percent="0.86"
+        tools:text="Unsupported municipality."
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
