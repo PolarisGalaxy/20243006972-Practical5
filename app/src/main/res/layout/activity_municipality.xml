@@ -63,7 +63,7 @@
     </ScrollView>
 
     <!-- Button background colour set programmatically -->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/visitSiteButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -73,10 +73,11 @@
         android:textAllCaps="false"
         android:textColor="@color/color_text_light"
         android:textSize="16sp"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.7"
-        tools:background="@color/municipality_beijing" />
+        tools:backgroundTint="@color/municipality_beijing" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

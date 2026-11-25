@@ -91,7 +91,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:paddingHorizontal="24dp"
-        android:textColor="#C62828"
+        android:textColor="@color/color_error_text"
         android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"

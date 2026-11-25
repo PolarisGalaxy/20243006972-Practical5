@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Municipality identity colours -->
-    <color name="municipality_beijing">#E53935</color>
+    <!--
+        Municipality identity colours.
+
+        These values are chosen so that white text on the colour (the name bar and
+        the Visit site button) and the colour used as body text on the light app
+        background both meet the WCAG AA contrast ratio of 4.5:1.
+    -->
+    <color name="municipality_beijing">#D32F2F</color>
     <color name="municipality_shanghai">#D81B60</color>
     <color name="municipality_tianjin">#37474F</color>
-    <color name="municipality_chongqing">#FB8C00</color>
+    <color name="municipality_chongqing">#C2410C</color>
 
     <!-- Generic text colours -->
     <color name="color_text_light">#FFFFFF</color>
@@ -12,6 +18,9 @@
 
     <!-- Background -->
     <color name="color_default_background">#F4F4F6</color>
+
+    <!-- Error message -->
+    <color name="color_error_text">#C62828</color>
 
     <!-- Launcher icon background -->
     <color name="ic_launcher_background">#000000</color>

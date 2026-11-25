@@ -2,6 +2,7 @@ package com.example.practicalfive;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,6 +13,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.google.android.material.button.MaterialButton;
 
 /**
  * The second screen. It shows the name, photograph and summary of the municipality
@@ -32,7 +35,7 @@ public class Municipality extends AppCompatActivity {
     private TextView nameTextView;
     private ImageView municipalityImageView;
     private TextView infoTextView;
-    private Button visitSiteButton;
+    private MaterialButton visitSiteButton;
 
     /** The validated municipality currently displayed, used by the Visit site button. */
     private String currentMunicipality;
@@ -93,8 +96,12 @@ public class Municipality extends AppCompatActivity {
         }
         infoTextView.setTextColor(ContextCompat.getColor(this, colourResId));
 
-        // Visit site button, in the municipality's own colour.
+        // Visit site button, in the municipality's own colour. The tint is set as
+        // well as the background colour so that the Material button renders the
+        // municipality colour reliably on every Android version.
         visitSiteButton.setBackgroundColor(ContextCompat.getColor(this, colourResId));
+        visitSiteButton.setBackgroundTintList(
+                ColorStateList.valueOf(ContextCompat.getColor(this, colourResId)));
         visitSiteButton.setTextColor(ContextCompat.getColor(this, R.color.color_text_light));
 
         visitSiteButton.setOnClickListener(new View.OnClickListener() {
